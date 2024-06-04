@@ -15,13 +15,14 @@ public class DynamicWebtable extends BaseTestClass{
 	@Test
     public void findMaxValueinWebtable() throws ParseException
     {
+		
        WebElement table= driver.findElement(By.className("dataTable"));
      List<WebElement> lst_rows=  table.findElements(By.xpath("//tr//td[1]"));
       List<WebElement> lst_columns=table.findElements(By.xpath("//tr//th"));
      int row_size=lst_rows.size();
      int col_size= lst_columns.size();
      System.out.println("row size is: "+row_size+"column size is :"+col_size);
-     
+     System.out.println("jhhhh");
      for(int i=1;i< row_size-1;i++)
      {
     	 max=driver.findElement(By.xpath("//table[@class='dataTable']//tr["+(i+1)+"]//td[4]")).getText();
