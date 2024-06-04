@@ -20,6 +20,7 @@ public class BaseTestClass {
 		//driver.get("https://www.moneycontrol.com/");
 		driver.manage().window().maximize();
 		Thread.sleep(20000);
+		System.out.println("bbfvhbhv");
 		
 	}
 	
