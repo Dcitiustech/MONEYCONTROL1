@@ -7,16 +7,18 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTestClass {
 	public static WebDriver driver;
+	String s;
 	
 	@BeforeMethod
 	public void browserSetUp() throws InterruptedException {
 		String path = System.getProperty("user.dir");
 		System.setProperty("Webdriver.Chrome.driver", path+"//Resourses//chromedriver.exe");
 		driver=new ChromeDriver();
-		//driver.get("https://demo.guru99.com/test/web-table-element.php");
-		driver.get("https://www.moneycontrol.com/");
+		driver.get("https://demo.guru99.com/test/web-table-element.php");
+		//driver.get("https://www.moneycontrol.com/");
 		driver.manage().window().maximize();
-		Thread.sleep(10000);
+		Thread.sleep(20000);
+		
 	}
 	
 	@AfterMethod
