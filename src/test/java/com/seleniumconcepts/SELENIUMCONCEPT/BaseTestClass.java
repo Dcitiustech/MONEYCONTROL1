@@ -1,5 +1,7 @@
 package com.seleniumconcepts.SELENIUMCONCEPT;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -10,11 +12,11 @@ public class BaseTestClass {
 	String s;
 	
 	@BeforeMethod
-	public void browserSetUp() throws InterruptedException {
+	public void browserSetUp() throws InterruptedException, IOException {
 		String path = System.getProperty("user.dir");
 		System.setProperty("Webdriver.Chrome.driver", path+"//Resourses//chromedriver.exe");
 		driver=new ChromeDriver();
-		driver.get("https://demo.guru99.com/test/web-table-element.php");
+		driver.get(PropertyReader.getvaluefromProp("MoneycontrolURL"));
 		//driver.get("https://www.moneycontrol.com/");
 		driver.manage().window().maximize();
 		Thread.sleep(20000);
