@@ -2,10 +2,14 @@ package com.seleniumconcepts.SELENIUMCONCEPT;
 
 import java.text.NumberFormat;
 import java.text.ParseException;
+import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class DynamicWebtable extends BaseTestClass{
@@ -15,6 +19,8 @@ public class DynamicWebtable extends BaseTestClass{
 	@Test
     public void findMaxValueinWebtable() throws ParseException
     {
+		util=new Utility();
+		util.Alerthandle();
 		
        WebElement table= driver.findElement(By.className("dataTable"));
      List<WebElement> lst_rows=  table.findElements(By.xpath("//tr//td[1]"));
@@ -39,10 +45,6 @@ public class DynamicWebtable extends BaseTestClass{
      System.out.println("Maximum current price is:"+r);
     }
 	
-	@Test
-	public void windowHandle()
-	{
-		
-	}
+	
 
 }

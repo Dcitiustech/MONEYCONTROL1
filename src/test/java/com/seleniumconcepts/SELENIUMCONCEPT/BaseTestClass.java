@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTestClass {
 	public static WebDriver driver;
+	public Utility util;
 	String s;
 	
 	@BeforeMethod
