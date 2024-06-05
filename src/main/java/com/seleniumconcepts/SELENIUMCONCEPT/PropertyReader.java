@@ -17,7 +17,7 @@ public class PropertyReader {
 		FileReader file=new FileReader(path+"//Resourses//testdata.properties");
 		prop.load(file);
 	String str=	prop.getProperty(key);
-	return str;
+	return str;  
 		
 		
 	}
