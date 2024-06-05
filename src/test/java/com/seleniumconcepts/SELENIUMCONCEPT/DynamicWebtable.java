@@ -38,5 +38,11 @@ public class DynamicWebtable extends BaseTestClass{
      }
      System.out.println("Maximum current price is:"+r);
     }
+	
+	@Test
+	public void windowHandle()
+	{
+		
+	}
 
 }
