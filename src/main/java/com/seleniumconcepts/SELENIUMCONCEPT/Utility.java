@@ -1,7 +1,9 @@
 package com.seleniumconcepts.SELENIUMCONCEPT;
 
 import java.time.Duration;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
@@ -23,7 +25,7 @@ public class Utility {
 		{
 			System.out.println("alert was present");
 			Alert alert=driver.switchTo().alert();
-			alert.accept();
+			alert.dismiss();
 		}
 	}
 
@@ -93,5 +95,20 @@ public void waitforcondtiontomeetforelement(WebDriver driver,WebElement element)
 	WebDriverWait wait=new WebDriverWait(driver,Duration.ofMillis(1000));
 	wait.until(ExpectedConditions.visibilityOf(element));
 	
+}
+
+public void getchildWindow()
+{
+	String mainwindow=driver.getWindowHandle();
+	Set<String> childwindow=driver.getWindowHandles();
+	Iterator<String> itr=childwindow.iterator();
+	 while(itr.hasNext())
+	 {
+		 String childwindow1=itr.next();
+		 if(!mainwindow.equalsIgnoreCase(childwindow1))
+		 {
+			 driver.switchTo().window(childwindow1);
+		 }
+	 }
 }
 }

@@ -8,9 +8,12 @@ import java.util.List;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+
+import com.seleniumconcepts.SELENIUMCONCEPT.moneycontrol.pages.LoginPage;
 
 public class DynamicWebtable extends BaseTestClass{
 	String max;
@@ -46,5 +49,12 @@ public class DynamicWebtable extends BaseTestClass{
     }
 	
 	
-
+@Test
+public void loginToMoneyControl()
+{
+	lpage=new LoginPage(driver);
+	Actions act=new Actions(driver);
+	util.Alerthandle();
+	act.moveToElement(lpage.btn_login).click();
+}
 }

@@ -7,9 +7,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import com.seleniumconcepts.SELENIUMCONCEPT.moneycontrol.pages.LoginPage;
+
 public class BaseTestClass {
 	public static WebDriver driver;
 	public Utility util;
+	public LoginPage lpage;
 	String s;
 	
 	@BeforeMethod
