@@ -4,7 +4,6 @@
   <test name="Chrometest">
     <classes>
       <class name="com.seleniumconcepts.SELENIUMCONCEPT.DynamicWebtable"/>
-       <class name="com.seleniumconcepts.SELENIUMCONCEPT.DynamicWebtable"/>
-    </classes>
+          </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
