@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.seleniumconcepts.SELENIUMCONCEPT.DynamicWebTableMoneyControl">
+      <class name="com.seleniumconcepts.SELENIUMCONCEPT.PDFContentValidationFor_ComprehensiveEncounter">
         <methods>
-          <include name="MaxLastpricevalue"/>
+          <include name="verifyHomepage"/>
           <include name="browserSetUp"/>
           <include name="deleteSession"/>
         </methods>
-      </class> <!-- com.seleniumconcepts.SELENIUMCONCEPT.DynamicWebTableMoneyControl -->
+      </class> <!-- com.seleniumconcepts.SELENIUMCONCEPT.PDFContentValidationFor_ComprehensiveEncounter -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

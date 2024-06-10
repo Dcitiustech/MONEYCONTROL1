@@ -1,1 +1,5 @@
 com\seleniumconcepts\SELENIUMCONCEPT\App.class
+com\seleniumconcepts\SELENIUMCONCEPT\moneycontrol\pages\LoginPage.class
+com\seleniumconcepts\SELENIUMCONCEPT\PropertyReader.class
+com\seleniumconcepts\SELENIUMCONCEPT\moneycontrol\pages\BeseTestPage.class
+com\seleniumconcepts\SELENIUMCONCEPT\Utility.class

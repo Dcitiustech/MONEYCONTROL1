@@ -7,10 +7,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BeseTestPage {
-	@FindBy(xpath="//a[contains(text(),'Hello')]")
+	@FindBy(id="username")
+	@CacheLookup
+	public WebElement txtbox_username;
+	
+	@FindBy(id="password")
+	@CacheLookup
+	public WebElement txtbox_password;
+	
+	@FindBy(id="loginButton")
 	@CacheLookup
 	public WebElement btn_login;
-	
 
 	public LoginPage(WebDriver driver)
 	{

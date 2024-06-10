@@ -13,8 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utility {
-	WebDriver driver;
-	public void Alerthandle()
+	
+	public void Alerthandle(WebDriver driver)
 	{
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(15));
 		if(wait.until(ExpectedConditions.alertIsPresent())==null)
@@ -25,7 +25,7 @@ public class Utility {
 		{
 			System.out.println("alert was present");
 			Alert alert=driver.switchTo().alert();
-			alert.dismiss();
+			alert.accept();
 		}
 	}
 
@@ -92,12 +92,12 @@ public void waitforElementtoload(WebDriver driver)
 }
 public void waitforcondtiontomeetforelement(WebDriver driver,WebElement element)
 {
-	WebDriverWait wait=new WebDriverWait(driver,Duration.ofMillis(1000));
+	WebDriverWait wait=new WebDriverWait(driver,Duration.ofMillis(5000));
 	wait.until(ExpectedConditions.visibilityOf(element));
 	
 }
 
-public void getchildWindow()
+public void getchildWindow(WebDriver driver)
 {
 	String mainwindow=driver.getWindowHandle();
 	Set<String> childwindow=driver.getWindowHandles();
@@ -110,5 +110,13 @@ public void getchildWindow()
 			 driver.switchTo().window(childwindow1);
 		 }
 	 }
+}
+public void setInputinSendkeys(WebElement ele, String text)
+{
+	ele.sendKeys(text);
+}
+public void clickOnElement(WebElement ele)
+{
+	ele.click();
 }
 }
